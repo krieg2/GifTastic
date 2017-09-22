@@ -3,6 +3,10 @@
 	border-radius: 5px;
 }
 
+button:hover, button:active, button:focus {
+    background-color: #FFFFFF;
+}
+
 #form {
 	float: right;
 	margin: 30px;
