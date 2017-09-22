@@ -1,0 +1,18 @@
+.button, #add-subject {
+	background-color: #90EE90;
+	border-radius: 5px;
+}
+
+#form {
+	float: right;
+	margin: 30px;
+}
+
+.image {
+	margin: 10px;
+	float: left;
+}
+
+#comedians {
+	max-width: 800px;
+}
