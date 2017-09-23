@@ -46,17 +46,32 @@ $(document).ready(function() {
           for(var i=0; i < data.length; i++){	
 
           	  var stillUrl = data[i].images.fixed_height_still.url;
-          	  var animateUrl =  data[i].images.fixed_height.url;
-              var rating =  data[i].rating;
+          	  var animateUrl = data[i].images.fixed_height.url;
+              var rating = data[i].rating;
 
+              var table = $("<table>");
+              var row1 = $("<tr>");
+              var row2 = $("<tr>");
               var image = $("<img>");
+              var cell1 = $("<td>");
+              var cell2 = $("<td>");
+
               image.attr("data-state", "still");
               image.attr("data-still", stillUrl);
               image.attr("data-animate", animateUrl);
               image.attr("src", stillUrl);
               image.attr("alt", subject);
               image.addClass("image");
-              $("#comedians").append(image);
+              
+              cell1.text("Rating: " + rating);
+              cell1.css("padding", "5px");
+              cell2.append(image);
+              row1.append(cell1);
+              row2.append(cell2);
+              table.append(row1);
+              table.append(row2);
+              table.css("float", "left");
+              $("#comedians").append(table);
           }
         });
     });
